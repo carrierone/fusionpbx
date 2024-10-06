@@ -675,6 +675,10 @@
 		echo "<th class='shrink'>".$text['label-accountcode']."</th>\n";
 		$col_count++;
 	}
+	if ($permission['xml_cdr_account_code']) {
+		echo "<th class='shrink'>".$text['label-accountcode']."</th>\n";
+		$col_count++;
+	}
 	if ($permission['xml_cdr_recording'] && ($permission['xml_cdr_recording_play'] || $permission['xml_cdr_recording_download'])) {
 		echo "<th class='center'>".$text['label-recording']."</th>\n";
 		$col_count++;
