@@ -61,6 +61,12 @@
 //add xml_cdr_account_code permission
 	$permission['xml_cdr_account_code'] = permission_exists('xml_cdr_account_code');
 
+	//ensure xml_cdr_account_code permission is added
+	if (!$permission['xml_cdr_account_code']) {
+		$p = new permissions;
+		$p->add('xml_cdr_account_code', 'xml_cdr', '4a085c51-7635-ff03-f67b-86e834422848');
+	}
+
 
 //get the http post data
 	$view = $_REQUEST['view'] ?? '';
