@@ -957,12 +957,6 @@
 							$content .= "	<td>&nbsp;</td>\n";
 						}
 					}
-				//account code
-					if ($permission['xml_cdr_account_code']) {
-						$content .= "	<td class='middle no-link no-wrap'>";
-						$content .= 		$row['accountcode'];
-						$content .= "	</td>\n";
-					}
 				//custom cdr fields
 					if ($permission['xml_cdr_custom_fields']) {
 						if (!empty($_SESSION['cdr']['field']) && is_array($_SESSION['cdr']['field'])) {
