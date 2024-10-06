@@ -58,6 +58,9 @@
 	$language = new text;
 	$text = $language->get();
 
+//add xml_cdr_account_code permission
+	$permission['xml_cdr_account_code'] = permission_exists('xml_cdr_account_code');
+
 
 //get the http post data
 	$view = $_REQUEST['view'] ?? '';
