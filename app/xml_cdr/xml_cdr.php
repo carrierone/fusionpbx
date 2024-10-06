@@ -935,6 +935,11 @@
 						$content .= "		</a>\n";
 						$content .= "	</td>\n";
 					}
+					if ($permission['xml_cdr_account_code']) {
+						$content .= "	<td class='middle no-link no-wrap'>";
+						$content .= "		".escape($row['accountcode']);
+						$content .= "	</td>\n";
+					}
 				//recording
 					if ($permission['xml_cdr_recording'] && ($permission['xml_cdr_recording_play'] || $permission['xml_cdr_recording_download'])) {
 						if (!empty($record_path) || !empty($record_name)) {
